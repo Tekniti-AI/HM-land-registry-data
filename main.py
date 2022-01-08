@@ -141,15 +141,15 @@ def bottom_20_county():
     bottom20_county.sort_values(ascending=True, inplace=True)
 
     bottom20county = px.bar(x=bottom20_county.values,
-                       y=bottom20_county.index,
-                       orientation='h',
-                       color=bottom20_county.values,
-                       color_continuous_scale=px.colors.sequential.haline,
-                       title='Bottom 20 Counties by Number of Sales')
+                            y=bottom20_county.index,
+                            orientation='h',
+                            color=bottom20_county.values,
+                            color_continuous_scale=px.colors.sequential.haline,
+                            title='Bottom 20 Counties by Number of Sales')
 
     bottom20county.update_layout(xaxis_title='Number of Sales',
-                            yaxis_title='City/Town',
-                            coloraxis_showscale=False)
+                                 yaxis_title='City/Town',
+                                 coloraxis_showscale=False)
     plotly.offline.plot(bottom20county, filename="bottom20_county.html")
 
 
@@ -171,28 +171,3 @@ def location_sunburst():
                         coloraxis_showscale=False)
 
     plotly.offline.plot(burst, filename="location_burst.html")
-
-location_sunburst()
-#
-
-# print(nomi.query_postal_code("B63 3BJ"))
-#
-#
-# print(type(data['postcode'][1]))
-# #
-#
-# for index, row in data.iterrows():
-#     # print(index)
-#     # print(row)
-#     # print(data['postcode'][index])
-#     try:
-#         data.loc[index, 'latitude'] = nomi.query_postal_code(data['postcode'][index])['latitude']
-#         data.loc[index, 'longitude'] = nomi.query_postal_code(data['postcode'][index])['longitude']
-#         # data['latitude'][index] = nomi.query_postal_code(data['postcode'][index])['latitude']
-#         # data['longitude'][index] = nomi.query_postal_code(data['postcode'][index])['longitude']
-#         print(f"Post code:{data['postcode'][index]} | lat: {data['latitude'][index]} | lon: {data['latitude'][index]}")
-#     except:
-#         data.loc[index, 'latitude'] = 0
-#         data.loc[index, 'longitude'] = 0
-#
-# data.to_csv("updated.csv")
