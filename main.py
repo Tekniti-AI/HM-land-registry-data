@@ -4,7 +4,6 @@ import plotly
 import seaborn as sns
 import plotly.express as px
 import matplotlib.pyplot as plt
-
 from sklearn.linear_model import LinearRegression
 import pgeocode
 
@@ -46,6 +45,8 @@ def add_latlon(dataset, filename):
     data.to_csv(filename)
 
 
+# ---------------------------- Functions to generate graphs ------------------------------- #
+
 def type_sold():
     types = data.property_type.value_counts()
     fig = px.pie(labels=types.index,
@@ -62,12 +63,12 @@ def sold_location():
     locations = data.county.value_counts()
     fig = px.pie(labels=locations.index,
                  values=locations.values,
-                 title="Type of properties sold",
+                 title="Properties sold per location",
                  names=locations.index,
                  hole=0.4, )
 
     fig.update_traces(textposition='inside', textfont_size=15, textinfo='percent')
-    plotly.offline.plot(fig, filename="type_location.html")
+    plotly.offline.plot(fig, filename="sold_location.html")
 
 
 def sales_per_category():
@@ -133,7 +134,7 @@ def bottom_20_cities():
     bottom20c.update_layout(xaxis_title='Number of Sales',
                             yaxis_title='City/Town',
                             coloraxis_showscale=False)
-    plotly.offline.plot(bottom20c, filename="bottom20_county.html")
+    plotly.offline.plot(bottom20c, filename="bottom20_cities.html")
 
 
 def bottom_20_county():
@@ -163,11 +164,13 @@ def location_sunburst():
     burst = px.sunburst(county_district_city,
                         path=['county', 'district', 'town_city'],
                         values='price',
-                        title='Where do sales take place?',
+                        title='Where did transactions take place?',
                         )
 
-    burst.update_layout(xaxis_title='Number of Prizes',
-                        yaxis_title='City',
+    burst.update_layout(xaxis_title='Number of Transactions',
+                        yaxis_title='date_of_transfer',
                         coloraxis_showscale=False)
 
     plotly.offline.plot(burst, filename="location_burst.html")
+
+# ---------------------------- Use functions from above to generate graphs ------------------------------- #
