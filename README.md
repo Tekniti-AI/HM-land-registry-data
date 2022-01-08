@@ -12,8 +12,37 @@ Loads the csv data downloaded from the gov website, converts it to pandas datafr
 
 Cleans the data by removing transactions which do not have postcodes (optional)
 
-<code>add_latlon</code> functionality goes through all of the transactions and adds latitude and longitude for the property. This works with pgeocode Python library.
+<code>add_latlon(dataset, filename)</code> functionality goes through all of the transactions and adds latitude and longitude for the property. This works with pgeocode Python library. Updated csv file will be saved as "filename"
 
-<code>type_sold</code> shows the type of properties sold historically with pie charts. T - Terraced, S - SemiDetached, D - Detached, F - Detached, F - Flat, O - Other.
+<code>type_sold()</code> shows the type of properties sold historically by percentage. T - Terraced, S - SemiDetached, D - Detached, F - Detached, F - Flat, O - Other.
 
-<img src = "./doc_imag/type_sold.jpg">
+<img src = "./doc_img/type_sold.jpg">
+
+<code>sold_location()</code> shows the percentage of all properties sold per location(county)
+
+<img src = "./doc_img/sold_location.jpg">
+
+<code>sales_per_category()</code> shows the number of sales per category. T - Terraced, S - SemiDetached, D - Detached, F - Detached, F - Flat, O - Other.
+
+<img src = "./doc_img/sales_per_category.jpg">
+
+<code>top_20_cities()</code> shows the top 20 cities by transaction numbers.
+
+<img src = "./doc_img/top_20_cities.jpg">
+
+<code>top_20_county()</code> shows the top 20 counties by transaction numbers.
+
+<img src = "./doc_img/top_20_counties.jpg">
+
+<code>bottom_20_cities()</code> shows the bottom 20 cities by transaction numbers.
+
+<img src = "./doc_img/bottom_20_cities.jpg">
+
+<code>bottom_20_county()</code> shows the bottom 20 counties by transaction numbers.
+
+<img src = "./doc_img/bottom_20_county.jpg">
+
+<code>location_sunburst())</code> shows the interactive sunburst chart of property transactions per location
+
+<img src = "./doc_img/sunburst1.jpg">
+<img src = "./doc_img/sunburst2.jpg">
