@@ -38,7 +38,7 @@ Cleans the data by removing transactions which do not have postcodes (optional)
 
 <img src = "./doc_img/bottom_20_cities.jpg">
 
-<code>bottom_20_county()</code> shows the bottom 20 counties by transaction numbers.
+<code>bottom_20_county()</code> shows the bottom 20 counties by transaction numbers. (WIP)
 
 <img src = "./doc_img/bottom_20_county.jpg">
 
