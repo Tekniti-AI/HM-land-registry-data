@@ -1,7 +1,7 @@
 # HM-land-registry-data
 Data analysis of HM Land Registry transactions
 
-<code>HM-land-registry-datar</code> is a simple Python script that allows the user to analyze the large dataset from https://www.gov.uk/guidance/about-the-price-paid-data#download-options.
+<code>HM-land-registry-data</code> is a simple Python script that allows the user to analyse the large dataset from https://www.gov.uk/guidance/about-the-price-paid-data#download-options.
 
 ## How it works
 
