@@ -16,4 +16,4 @@ Cleans the data by removing transactions which do not have postcodes (optional)
 
 <code>type_sold</code> shows the type of properties sold historically with pie charts. T - Terraced, S - SemiDetached, D - Detached, F - Detached, F - Flat, O - Other.
 
-<img src = "./doc_imag/type_sold.jpg">
+<img src = "./doc_img/type_sold.jpg">
