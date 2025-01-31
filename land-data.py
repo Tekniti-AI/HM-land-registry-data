@@ -11,7 +11,7 @@ import pgeocode
 
 # Data and data description can be found here: https://www.gov.uk/guidance/about-the-price-paid-data#download-options
 
-data = pd.read_csv("pp-monthly-update-new-version.csv")
+data = pd.read_csv("datasets/pp-2024.csv")
 headers = ["id", "price", "date_of_transfer", "postcode", "property_type", "old_new", "duration", "paon", "saon",
            "street", "locality", "town_city", "district", "county", "ppd_caterogy_type", "record_status"]
 data.columns = headers
